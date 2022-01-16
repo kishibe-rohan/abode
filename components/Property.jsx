@@ -17,8 +17,8 @@ const Property = ({property:{ coverPhoto, price, rentFrequency, rooms, title, ba
                 <Box w='full'>
                     <Flex paddingTop='2' alignItems='center' justifyContent='space-between'>
                         <Flex alignItems='center'>
-                        <Box paddingRight='3' color='orange.400'>{isVerified && <GoVerified />}</Box>
-                        <Text fontWeight='bold' color='orange.400' fontSize='lg'>AED{price}{rentFrequency && `/${rentFrequency}`}</Text>
+                        <Box paddingRight='3' color='green'>{isVerified && <GoVerified />}</Box>
+                        <Text fontWeight='bold' color='orange.400' fontSize='lg'>AED {millify(price)}{rentFrequency && `/${rentFrequency}`}</Text>
                         </Flex>
                         <Box>
                             <Avatar size='sm' src={agency?.logo?.url}></Avatar>
