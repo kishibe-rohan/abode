@@ -17,14 +17,14 @@ const Property = ({property:{ coverPhoto, price, rentFrequency, rooms, title, ba
                 <Box w='full'>
                     <Flex paddingTop='2' alignItems='center' justifyContent='space-between'>
                         <Flex alignItems='center'>
-                        <Box paddingRight='3' color='green.400'>{isVerified && <GoVerified />}</Box>
-                        <Text fontWeight='bold' fontSize='lg'>AED{price}{rentFrequency && `/${rentFrequency}`}</Text>
+                        <Box paddingRight='3' color='orange.400'>{isVerified && <GoVerified />}</Box>
+                        <Text fontWeight='bold' color='orange.400' fontSize='lg'>AED{price}{rentFrequency && `/${rentFrequency}`}</Text>
                         </Flex>
                         <Box>
                             <Avatar size='sm' src={agency?.logo?.url}></Avatar>
                         </Box>
                     </Flex>
-                    <Flex alignItems='center' p='1' justifyContent='space-between' w='250px' color='orange.400'>
+                    <Flex alignItems='center' p='1' justifyContent='space-between' color='blue.500' w='250px'>
                         {rooms}
                         <FaBed /> | {baths} <FaBath /> | {millify(area)} sqft <BsGridFill />
                     </Flex>
